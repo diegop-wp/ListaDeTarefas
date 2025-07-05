@@ -12,8 +12,13 @@ public class TarefaServico {
     }
 
     public void listar() {
-        for (int i = 0; i < tarefas.size(); i++) {
-            System.out.println(tarefas.get(i));
+        if (tarefas.isEmpty()) {
+            System.out.println("Nenhuma Tarefa foi adicionada");
+        } else {
+            for (int i = 0; i < tarefas.size(); i++) {
+                System.out.println(tarefas.get(i));
+            }
+
         }
 
     }
