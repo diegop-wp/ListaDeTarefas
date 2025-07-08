@@ -23,4 +23,18 @@ public class TarefaServico {
 
     }
 
+    public void concluir(String valorBusca) {
+        //verificando se o valorbusca e valido
+        for (Tarefa tarefa : tarefas) {
+            if (tarefa.getDescricao().equalsIgnoreCase(valorBusca)){
+                tarefa.concluir();
+                System.out.println("Tarefa concluida");
+            }else {
+                System.out.println(" Valor não encontrado na lista: "+valorBusca);
+            }
+        }
+
+
+    }
+
 }
