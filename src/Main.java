@@ -11,6 +11,7 @@ public class Main {
             System.out.println("MENU");
             System.out.println("1- Adicionar");
             System.out.println("2- Listar");
+            System.out.println("3- Concluir tarefa");
 
             opcao = Integer.parseInt(entrada.nextLine());
             //convertendo int para String para evitar bugs com ENTER
@@ -24,6 +25,11 @@ public class Main {
                 case 2:
                     tarefaServico.listar();
                     break;
+                case 3:
+                System.out.println("Qual tarefa você quer concluir?");
+                   String concluir = entrada.nextLine();
+                tarefaServico.concluir(concluir);
+                break;
                 case 0:
                     System.out.println("saindo...");
 
