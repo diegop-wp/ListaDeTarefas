@@ -11,9 +11,6 @@ public class Tarefa {
         this.concluida = true;
     }
 
-    public void dataConcluir(int dataPrevista){
-
-    }
 
     @Override
     public String toString() {
