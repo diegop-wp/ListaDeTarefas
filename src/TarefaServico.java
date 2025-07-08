@@ -29,7 +29,7 @@ public class TarefaServico {
         for (Tarefa tarefa : tarefas) {
             if (tarefa.getDescricao().equalsIgnoreCase(valorBusca)){
                 tarefa.concluir();
-                System.out.println("Tarefa concluida");
+                System.out.println("Tarefa concluida: " + valorBusca );
                 achou = true;
                 break;
 
@@ -37,6 +37,21 @@ public class TarefaServico {
         }
         if (!achou){
             System.out.println("Valor não encontrado :"+valorBusca);
+        }
+
+    }
+    public void remover(String removeValor){
+        boolean achou = false;
+        for (Tarefa tarefa : tarefas) {
+            if (tarefa.getDescricao().equalsIgnoreCase(removeValor)){
+                tarefas.remove(tarefa);
+                System.out.println("Tarefa Removida:" + removeValor );
+                achou = true;
+                break;
+            }
+        }
+        if (!achou){
+            System.out.println("Valor não encotrado"+ removeValor);
         }
 
     }
