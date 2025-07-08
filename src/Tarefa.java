@@ -17,6 +17,11 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return concluida?"[X]":"[]"+descricao ;
+        return concluida?"[X]" + descricao :"[]"+descricao ;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
 }
